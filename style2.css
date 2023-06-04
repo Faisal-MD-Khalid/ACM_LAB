@@ -1,0 +1,97 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+body {
+  background-color: #007180;
+}
+
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  form {
+    background: #ffffffad;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .txt_field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .txt_field input[type="text"],
+  .txt_field input[type="password"] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .txt_field label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: #333;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .txt_field span {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #333;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+
+  .txt_field input[type="text"]:focus,
+  .txt_field input[type="password"]:focus {
+    outline: none;
+  }
+
+  .txt_field input[type="text"]:focus ~ label,
+  .txt_field input[type="password"]:focus ~ label {
+    top: -20px;
+    font-size: 12px;
+  }
